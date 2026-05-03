@@ -20,7 +20,7 @@ function App() {
       
       <TopNavBar />
       
-      <main className="max-w-7xl mx-auto px-8">
+      <main className="max-w-7xl mx-auto px-4 md:px-8">
         <Hero />
         <About />
         <Services />

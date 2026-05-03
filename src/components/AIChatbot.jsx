@@ -49,7 +49,7 @@ const AIChatbot = () => {
     }
     
     if (lowInput.includes('contact') || lowInput.includes('email') || lowInput.includes('linkedin')) {
-      return "You can contact AJITH here:\n\nEmail: ajithpec317@gmail.com\nLinkedIn: https://linkedin.com/in/ajith-v03";
+      return "You can contact AJITH here:\n\nEmail: startwithhiva@gmail.com\nLinkedIn: https://linkedin.com/in/ajith-v03";
     }
 
     if (lowInput.includes('hello') || lowInput.includes('hi')) {
@@ -67,10 +67,10 @@ const AIChatbot = () => {
   ];
 
   return (
-    <div className="fixed bottom-8 right-8 z-[100] font-inter">
+    <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-[100] font-inter">
       {/* Chat Window */}
       {isOpen && (
-        <div className="absolute bottom-20 right-0 w-[350px] md:w-[400px] h-[500px] glass-card rounded-[2.5rem] border border-white/10 shadow-2xl flex flex-col overflow-hidden animate-slide-up">
+        <div className="absolute bottom-20 right-0 w-[calc(100vw-2rem)] md:w-[400px] h-[500px] max-h-[70vh] glass-card rounded-[2.5rem] border border-white/10 shadow-2xl flex flex-col overflow-hidden animate-slide-up">
           {/* Header */}
           <div className="p-6 border-b border-white/5 bg-gradient-to-r from-primary/10 to-secondary/10 flex justify-between items-center">
             <div className="flex items-center gap-3">

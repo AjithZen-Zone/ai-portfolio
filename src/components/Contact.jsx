@@ -4,8 +4,8 @@ const Contact = () => {
   const contactInfo = [
     {
       label: "Email",
-      value: "ajithpec317@gmail.com",
-      href: "mailto:ajithpec317@gmail.com",
+      value: "startwithhiva@gmail.com",
+      href: "mailto:startwithhiva@gmail.com",
       icon: "mail"
     },
     {
@@ -66,8 +66,8 @@ const Contact = () => {
             
             <div className="pt-12">
               <a 
-                href="mailto:ajithpec317@gmail.com"
-                className="inline-block px-12 py-5 bg-gradient-to-r from-primary to-secondary text-white font-bold text-xl rounded-2xl hover:shadow-neon transition-all hover:-translate-y-1 shadow-glow-primary"
+                href="mailto:startwithhiva@gmail.com"
+                className="inline-block px-12 py-5 bg-white text-background font-bold text-xl rounded-2xl hover:shadow-neon transition-all hover:-translate-y-1"
               >
                 Start a Project
               </a>

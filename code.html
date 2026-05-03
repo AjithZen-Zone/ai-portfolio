@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AJITH V | AI Product Builder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#333a3d",
+                    "tertiary": "#ffd79f",
+                    "on-tertiary-fixed-variant": "#624000",
+                    "surface-container-lowest": "#090f12",
+                    "inverse-surface": "#dde3e7",
+                    "on-primary-container": "#00566a",
+                    "secondary": "#edb1ff",
+                    "secondary-container": "#6e208c",
+                    "on-tertiary-container": "#6c4700",
+                    "on-tertiary-fixed": "#291800",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed-variant": "#004e60",
+                    "on-primary": "#003543",
+                    "primary-container": "#00d2ff",
+                    "background": "#0e1417",
+                    "surface": "#0e1417",
+                    "primary": "#a5e7ff",
+                    "on-secondary-container": "#e498ff",
+                    "surface-variant": "#2f3639",
+                    "tertiary-container": "#ffb229",
+                    "surface-tint": "#47d6ff",
+                    "tertiary-fixed": "#ffddb1",
+                    "surface-dim": "#0e1417",
+                    "on-secondary": "#520070",
+                    "on-surface-variant": "#bbc9cf",
+                    "on-tertiary": "#442b00",
+                    "inverse-primary": "#00677f",
+                    "on-secondary-fixed-variant": "#6e208c",
+                    "surface-container-high": "#242b2e",
+                    "tertiary-fixed-dim": "#ffba4a",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#161d1f",
+                    "outline-variant": "#3c494e",
+                    "inverse-on-surface": "#2b3134",
+                    "surface-container-highest": "#2f3639",
+                    "on-surface": "#dde3e7",
+                    "secondary-fixed": "#f9d8ff",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed": "#001f28",
+                    "secondary-fixed-dim": "#edb1ff",
+                    "on-secondary-fixed": "#320046",
+                    "primary-fixed": "#b6ebff",
+                    "surface-container": "#1a2123",
+                    "on-error": "#690005",
+                    "outline": "#859399",
+                    "on-background": "#dde3e7",
+                    "primary-fixed-dim": "#47d6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-page": "64px",
+                    "stack-md": "32px",
+                    "stack-sm": "16px",
+                    "gutter": "24px",
+                    "container-max": "1200px",
+                    "stack-lg": "80px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "h2": ["Space Grotesk"],
+                    "h1": ["Space Grotesk"],
+                    "body-md": ["Inter"],
+                    "h3": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "h2": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "h1": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "h3": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.2em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            color: #dde3e7;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+        }
+        .neon-border-primary {
+            border-color: rgba(165, 231, 255, 0.3);
+        }
+        .radial-glow-1 {
+            background: radial-gradient(circle at center, rgba(0, 210, 255, 0.15) 0%, transparent 70%);
+        }
+        .radial-glow-2 {
+            background: radial-gradient(circle at center, rgba(237, 177, 255, 0.1) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="font-body-md">
+<div class="fixed inset-0 -z-10 overflow-hidden">
+<div class="absolute -top-[10%] -left-[10%] w-[60%] h-[60%] radial-glow-1"></div>
+<div class="absolute -bottom-[10%] -right-[10%] w-[60%] h-[60%] radial-glow-2"></div>
+</div>
+<!-- TopNavBar -->
+<header class="bg-[#050505]/60 backdrop-blur-2xl docked full-width top-0 sticky z-50 border-b border-white/10 shadow-2xl shadow-cyan-900/10">
+<nav class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto w-full font-space-grotesk tracking-tight">
+<div class="text-2xl font-bold tracking-tighter text-white uppercase">AJITH V</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-zinc-400 hover:text-white transition-colors" href="#About">About</a>
+<a class="text-zinc-400 hover:text-white transition-colors" href="#Skills">Skills</a>
+<a class="text-zinc-400 hover:text-white transition-colors" href="#Projects">Projects</a>
+<a class="text-zinc-400 hover:text-white transition-colors" href="#Contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-white opacity-80 hover:opacity-100 transition-opacity">terminal</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold uppercase text-xs tracking-widest hover:scale-95 active:scale-90 transition-transform">Resume</button>
+</div>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto px-8">
+<!-- Hero Section -->
+<section class="min-h-[819px] flex flex-col justify-center items-center text-center pt-20 pb-stack-lg">
+<div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full glass-card border-primary/20">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-caps text-primary uppercase">Available for Work</span>
+</div>
+<h1 class="font-h1 text-h1 text-white mb-6">
+                AJITH V
+            </h1>
+<h2 class="font-h2 text-h3 md:text-h2 text-primary-fixed-dim mb-8">
+                Full Stack Developer | AI Product Builder
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+                I build intelligent, real-world applications using full stack development and AI. Engineering the future through code and cognitive computing.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<a class="px-8 py-4 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-fixed font-bold text-lg hover:shadow-[0_0_30px_rgba(0,210,255,0.4)] transition-all transform hover:-translate-y-1" href="#Projects">
+                    View Projects
+                </a>
+<a class="px-8 py-4 rounded-xl border border-white/20 hover:bg-white/5 backdrop-blur-md text-white font-bold text-lg transition-all transform hover:-translate-y-1" href="#Contact">
+                    Contact Me
+                </a>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-stack-lg" id="About">
+<div class="glass-card rounded-3xl p-12 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<span class="font-label-caps text-secondary mb-4 block">01 // IDENTITY</span>
+<h2 class="font-h2 text-h2 text-white mb-6">The Focus</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            My journey is defined by the intersection of robust engineering and artificial intelligence. I specialize in building end-to-end applications that don't just solve problems but anticipate them. By leveraging modern tech stacks and prompt engineering, I transform complex data into intuitive user experiences.
+                        </p>
+</div>
+<div class="relative rounded-2xl overflow-hidden aspect-video group">
+<img alt="AI Visualization" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A highly detailed close-up of a futuristic neural network visualization with neon blue and purple light paths flowing through a dark, glass-like digital environment. The scene captures a cinematic and technologically advanced mood, reflecting high-end AI research aesthetics with soft glows and sharp edge definition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVOxtqcehBWAAg5719vkhyltrjPmziWpvf1tVyr2Os4noLmfk_C5eqi3AG41TdZXzy6Z0er71OQqx2s281--IXIrqKJgtp5LxYZvnv61GCaFmaqofTBjjLc9lnKtCIKAiNai0XGiu9kQLleZELYE5qDVE8CZZ1R0FNQyd_kndYjl91PeYe1D8CkHqZVQhKH6_mgrp2RgRmNvnXN7ooQmJM7J1EFq7QGsjWoYXHadlFU4rOtWG8Ymu9J8uCOvlCHRmUfPp1J73wB7F9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-stack-lg" id="Skills">
+<div class="flex flex-col items-center mb-16">
+<span class="font-label-caps text-secondary mb-4">02 // ARSENAL</span>
+<h2 class="font-h2 text-h2 text-white">Technical Expertise</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Frontend -->
+<div class="glass-card p-8 rounded-2xl hover:border-primary/40 transition-colors group">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">terminal</span>
+</div>
+<h3 class="font-h3 text-h3 text-white mb-4">Frontend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">React</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">Next.js</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">Tailwind</span>
+</div>
+</div>
+<!-- Backend -->
+<div class="glass-card p-8 rounded-2xl hover:border-secondary/40 transition-colors group">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
+<span class="material-symbols-outlined text-secondary">database</span>
+</div>
+<h3 class="font-h3 text-h3 text-white mb-4">Backend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-medium">Node.js</span>
+<span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-medium">APIs</span>
+<span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-medium">GraphQL</span>
+</div>
+</div>
+<!-- AI Tools -->
+<div class="glass-card p-8 rounded-2xl hover:border-tertiary/40 transition-colors group">
+<div class="w-12 h-12 rounded-lg bg-tertiary/10 flex items-center justify-center mb-6 group-hover:bg-tertiary/20 transition-colors">
+<span class="material-symbols-outlined text-tertiary">psychology</span>
+</div>
+<h3 class="font-h3 text-h3 text-white mb-4">AI &amp; Tools</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary rounded-full text-xs font-medium">AI Tools</span>
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary rounded-full text-xs font-medium">Prompts</span>
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary rounded-full text-xs font-medium">LangChain</span>
+</div>
+</div>
+<!-- Deployment -->
+<div class="glass-card p-8 rounded-2xl hover:border-primary/40 transition-colors group">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">cloud_upload</span>
+</div>
+<h3 class="font-h3 text-h3 text-white mb-4">Deployment</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">Vercel</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">Netlify</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">Docker</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-stack-lg" id="Projects">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="font-label-caps text-secondary mb-4 block">03 // VENTURES</span>
+<h2 class="font-h2 text-h2 text-white">Selected Works</h2>
+</div>
+<div class="hidden md:block">
+<a class="flex items-center gap-2 text-primary hover:text-white transition-colors group" href="#">
+<span class="font-label-caps">View All Lab Reports</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Mammoguard AI -->
+<div class="glass-card rounded-2xl overflow-hidden group">
+<div class="relative h-64 overflow-hidden">
+<img alt="Mammoguard AI" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A professional medical environment featuring high-tech diagnostic screens displaying mammography scans with AI-assisted overlays in neon blue. The lighting is clinical yet atmospheric, with subtle lens flares and a deep black background emphasizing the precision of the healthcare technology. The mood is hopeful and technologically sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6vE_g1qKjx7M-l_7sKtlEZXjD-WfDSWcckTtE8h-457PcPcqRHyDuS8GL7nae1VKVzoJzX5hWyXDzxqTpNiNuDZL5e0ZjDGnGbnb5ieiharm2YH-c5AK6UW8_ZobVXNrxNZof9EbF449aaygCwlC1NS-jOLZ4EH7XI2dtayhzs8mPCnw56qfFD00WbULp14ThXE6wsiSl2lfCEJEsmC1us7XSpwcIJRThHgBoCZqYJfFLfavWA_r9igC6l47yqktB4lg6ni2qAgSu"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="px-6 py-2 bg-white text-black font-bold rounded-full">View Case Study</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="font-h3 text-h3 text-white mb-3">Mammoguard AI</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Advanced healthcare diagnostic platform leveraging neural networks for early breast cancer detection.</p>
+<div class="flex gap-2">
+<span class="text-[10px] uppercase tracking-widest text-primary border border-primary/30 px-2 py-0.5 rounded">Python</span>
+<span class="text-[10px] uppercase tracking-widest text-primary border border-primary/30 px-2 py-0.5 rounded">PyTorch</span>
+</div>
+</div>
+</div>
+<!-- Lung AI -->
+<div class="glass-card rounded-2xl overflow-hidden group">
+<div class="relative h-64 overflow-hidden">
+<img alt="Lung AI" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Detailed scientific visualization of a human lung structure rendered in a glowing digital wireframe style. Vibrant cyan and magenta particles float around the structure in a dark, atmospheric void. The image represents cutting-edge AI analysis in pulmonology with a cinematic, glass-morphism aesthetic and sharp high-key highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfPL-S-75S7EPM0mDunCXZk3vFXH0fILNrvs4WxtO7fb_40MPt8izEKSlpnDZB52dMpNy-NW34pRLdiy_zpAzjgK8zRkbTYA-BmpgoMaIdjeZ82SckgiGgLdl-06Bbclo57l12fJwwf9tCqumLdBP4TSFFVrlgd4YC8NjhFaXbj9fdO_VM3hn9D_U4uWuolbIBJspm4KLbXvyXTPX4ETW7T5wimU64TxcTLIya-2rTk3R4uJrviPFiJ0vRJLBC7lRGlVVVFa__Z4pg"/>
+<div class="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="px-6 py-2 bg-white text-black font-bold rounded-full">View Case Study</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="font-h3 text-h3 text-white mb-3">Lung AI</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Real-time analysis system for pulmonary imaging and automated report generation using Computer Vision.</p>
+<div class="flex gap-2">
+<span class="text-[10px] uppercase tracking-widest text-secondary border border-secondary/30 px-2 py-0.5 rounded">React</span>
+<span class="text-[10px] uppercase tracking-widest text-secondary border border-secondary/30 px-2 py-0.5 rounded">FastAPI</span>
+</div>
+</div>
+</div>
+<!-- Credentials AI -->
+<div class="glass-card rounded-2xl overflow-hidden group">
+<div class="relative h-64 overflow-hidden">
+<img alt="Credentials AI" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Conceptual representation of digital security and verification, featuring glowing data blocks and geometric encryption symbols arranged in a sophisticated 3D grid. The color palette consists of deep indigos and neon electric blues, creating a sense of absolute security and technical rigor in a dark digital space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4B1_85YBiq-UYT47UGwcfsxA4ircahQeSHCfNosyHnLte2rDDw5E1RUJf6qhFkpP7I9LmvgvVY5R60DE2AxCN4UykxW101coluDK_hVbrMmG2DTAVCXe4EypgHtQf289GpXf6wG1DUgUSxVypQha8qysfzVUYSkZuW2vuDHYyeOkpHBRDjKIVAKi0V_en4fDf2hD0oowzdz0Y9hTemFVBxLMJnlyuoT3gysZI0c0kARm6mLrF95_JihtcK4hRcftL44TQp7JSE3DZ"/>
+<div class="absolute inset-0 bg-tertiary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="px-6 py-2 bg-white text-black font-bold rounded-full">View Case Study</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="font-h3 text-h3 text-white mb-3">Credentials AI</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Secure verification engine using blockchain and AI to validate institutional credentials instantaneously.</p>
+<div class="flex gap-2">
+<span class="text-[10px] uppercase tracking-widest text-tertiary border border-tertiary/30 px-2 py-0.5 rounded">Next.js</span>
+<span class="text-[10px] uppercase tracking-widest text-tertiary border border-tertiary/30 px-2 py-0.5 rounded">Solidity</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-stack-lg" id="Contact">
+<div class="glass-card rounded-3xl p-16 text-center border-secondary/20">
+<span class="font-label-caps text-secondary mb-6 block">04 // CONNECT</span>
+<h2 class="font-h2 text-h2 text-white mb-8">Let’s build something impactful</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-12">
+                    Looking for a developer who understands both the logic of the code and the intelligence of the machine? Let's talk.
+                </p>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="flex items-center gap-3 text-white hover:text-primary transition-colors group" href="mailto:hello@ajithv.dev">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
+<span class="font-body-md font-semibold">Email Me</span>
+</a>
+<a class="flex items-center gap-3 text-white hover:text-secondary transition-colors group" href="#">
+<span class="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform">linked_camera</span>
+<span class="font-body-md font-semibold">LinkedIn</span>
+</a>
+<a class="flex items-center gap-3 text-white hover:text-tertiary transition-colors group" href="#">
+<span class="material-symbols-outlined text-tertiary group-hover:scale-110 transition-transform">code</span>
+<span class="font-body-md font-semibold">GitHub</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#050505] w-full py-12 border-t border-white/10 mt-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto w-full gap-6 font-space-grotesk text-sm uppercase tracking-widest">
+<div class="text-lg font-black text-white">AJITH V</div>
+<div class="text-zinc-500 text-center md:text-left">
+                © 2024 AJITH V. ENGINEERED FOR THE FUTURE.
+            </div>
+<div class="flex gap-8">
+<a class="text-zinc-500 hover:text-cyan-300 transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="text-zinc-500 hover:text-cyan-300 transition-colors opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-zinc-500 hover:text-cyan-300 transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="text-zinc-500 hover:text-cyan-300 transition-colors opacity-80 hover:opacity-100" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>

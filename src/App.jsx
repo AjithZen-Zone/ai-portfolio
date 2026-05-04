@@ -1,39 +1,45 @@
 import React from 'react';
 import TopNavBar from './components/TopNavBar';
 import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import Skills from './components/Skills';
 import Projects from './components/Projects';
-import WhyChooseMe from './components/WhyChooseMe';
-import Contact from './components/Contact';
-import AIChatbot from './components/AIChatbot';
+import AIPlayground from './components/AIPlayground';
+import About from './components/About';
+import TechStack from './components/TechStack';
+import Process from './components/Process';
+import Testimonials from './components/Testimonials';
+import StrategyCTA from './components/StrategyCTA';
+import ProjectForm from './components/ProjectForm';
+import FeedbackForm from './components/FeedbackForm';
 import Footer from './components/Footer';
+import ChatBot from './components/ChatBot';
+
 
 function App() {
   return (
     <>
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute -top-[10%] -left-[10%] w-[60%] h-[60%] radial-glow-1"></div>
-        <div className="absolute -bottom-[10%] -right-[10%] w-[60%] h-[60%] radial-glow-2"></div>
-      </div>
-      
       <TopNavBar />
-      
-      <main className="max-w-7xl mx-auto px-4 md:px-8">
+      <main>
         <Hero />
         <About />
-        <Services />
-        <Skills />
+        <TechStack />
+        <Process />
         <Projects />
-        <WhyChooseMe />
-        <Contact />
-        <AIChatbot />
-      </main>
+        <AIPlayground />
+        <Testimonials />
+        <StrategyCTA />
+        <ProjectForm />
 
+        <FeedbackForm />
+      </main>
       <Footer />
+      <ChatBot />
     </>
   );
 }
+
+
+
+
+
 
 export default App;

@@ -1,36 +1,31 @@
 import React from 'react';
 
-const About = () => {
-  return (
-    <section className="py-24 px-6 md:px-12" id="About">
-      <div className="max-w-4xl mx-auto">
-        <div className="glass-card rounded-[2.5rem] p-10 md:p-16 relative overflow-hidden group border border-white/5 shadow-xl">
-          <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-30 group-hover:opacity-100 transition-opacity duration-700"></div>
-          
-          <div className="space-y-8 relative z-10 text-center md:text-left">
-            <div className="space-y-4">
-              <span className="font-space text-xs font-bold tracking-[0.4em] text-primary uppercase block">
-                // ABOUT THE ARCHITECT
-              </span>
-              <h2 className="font-space text-4xl md:text-5xl font-bold text-white tracking-tight">
-                Engineering Digital Intelligence
-              </h2>
-            </div>
-            
-            <div className="space-y-6">
-              <p className="font-inter text-lg md:text-xl text-on-surface-variant leading-relaxed font-light">
-                I am a <span className="text-white font-normal">full stack developer and freelancer</span> specializing in AI-powered applications. I work with startups and individuals to build scalable, real-world solutions from idea to deployment.
-              </p>
-              
-              <p className="font-inter text-lg md:text-xl text-on-surface-variant leading-relaxed font-light">
-                My focus is on delivering <span className="text-white font-normal">high-quality, impactful digital products</span> that combine robust full stack architecture with cutting-edge artificial intelligence.
-              </p>
-            </div>
-          </div>
+const About = () => (
+  <section id="About" className="py-48 px-8 md:px-16" style={{ background: '#050505' }}>
+    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div className="space-y-8">
+        <p className="section-label">Profile</p>
+        <h2 className="text-white font-black tracking-tightest leading-none"
+            style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)' }}>
+          Minimalist<br />Architect.
+        </h2>
+      </div>
+
+      <div className="space-y-10">
+        <p className="text-xl md:text-2xl text-text-secondary font-light leading-relaxed tracking-tight">
+          I am a Full Stack Developer and AI Product Builder dedicated to creating intelligent digital experiences. My work focuses on the intersection of complex engineering and clean, intentional design.
+        </p>
+        <p className="text-base text-text-muted leading-relaxed font-light">
+          With a focus on startups and innovative businesses, I help turn abstract ideas into scalable, production-ready products. I believe in the power of simplicity and the impact of well-crafted software.
+        </p>
+        <div className="pt-4">
+           <a href="#Contact" className="text-sm font-bold tracking-[0.3em] uppercase text-white border-b border-white/20 pb-2 hover:border-white transition-all">
+              Work with me
+           </a>
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default About;
